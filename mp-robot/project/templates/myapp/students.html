@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+</head>
+<body>
+<h1>学生信息列表</h1>
+<ul>
+    {%for stu in students%}
+    <li>
+        <a href="#">
+            {{stu.scontend}}}
+        </a>
+    </li>
+    {%endfor%}
+</ul>
+
+
+<!--js学习-->
+
+<p id="demo">JavaScript 可以更改 HTML 内容。</p>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">单击这里</button>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    <!--[if lte IE 9]>
+    <script>window.location.href = 'update.html';</script><![endif]-->
+    <meta charset="UTF-8"/>
+    <meta name="keywords" content="疯狂影视搜索,疯狂搜索,电影搜索,疯狂电影搜索,影视搜索,全能影视搜索,择天记全集"/>
+    <meta name="description" content="疯狂影视搜索是一款全能影视搜索引擎，帮你找到最新影视资源，一站拥有无尽影视资源，下载最新影视资源，下载全集版影视资源。"/>
+    <title>疯狂影视搜索-最有用的影视搜索引擎</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="kkpager/kkpager_orange.css">
+    <script>
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+        if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+            var iScale = 1;
+            iScale = iScale / window.devicePixelRatio;
+            document.write('<meta name="viewport" content="width=device-width,initial-scale=' + iScale + ',minimum-scale=' + iScale + ',maximum-scale=' + iScale + ',user-scalable=no" />')
+            var iWidth = document.documentElement.clientWidth;
+            document.getElementsByTagName('html')[0].style.fontSize = iWidth / 15 + 'px';
+            document.write('<link rel="stylesheet" type="text/css" href="css/m_result.css?v=247144" >')
+        } else {
+            document.write('<link rel="stylesheet" type="text/css" href="css/result.css?v=247144" />')
+        }
+    </script>
+    <script src="kkpager/kkpager.min.js"></script>
+</head>
+<div class="top-bar">
+    <a class="search-logo" href="http://ifkdy.com/"></a>
+    <div id="search-container">
+        <div class="search-bar clearfix">
+            <input type="text" name="search-input" id="search-input" value="微信" placeholder="输入影视关键词"/>
+            <span id="search-btn"></span>
+        </div>
+        <div class="suggesst-words">
+            <ul></ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="search-result">
+    <p class="result-cat">
+        <span class="cat-all" hdValue="all">全 部(2)</span>
+        <span class="cat-common" hdValue="0">普 通(1)</span>
+        <span class="cat-hd" hdValue="1">高 清(1)</span>
+    </p>
+
+    <a id="hy2" href="http://lolbaicai.com/index.php?r=p" target="_blank"
+       style="display: none;width: 100%;height: 150px;margin-top: 20px;"
+       onclick="_czc.push(['_trackEvent', '广告', '点击', '电脑端-LOL白菜']);">
+        <img src="img/yhq.gif" style="display: block;width: 370px;height: 150px;margin:0 auto;"/>
+    </a>
+
+    <!-- <a id="youhuiq" href="#" target="_blank"><img src="#"/></a> -->
+    <!-- <a id="daikuan"><img src=""/></a> -->
+    <div class="result-detail10993hhh">
+        <ul>
+            <li>
+                <a href="http://czjx8.com/?url=http://www.iqiyi.com/v_19rrds91uo.html" target="_blank">
+                    <span class="site-name">[在线播放]</span>
+                    <span>发个微信去天界</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.bd-film.cc/zy/17841.htm" target="_blank">
+                    <span class="site-name">[BD影视]</span>
+                    <span>微电影《微信之艳遇》720p.HD国语中字</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mainbody_6" style="margin: 0 auto;margin-bottom: 0px;margin-top: 26px;">
+        <div id="kkpager">
+        </div>
+    </div>
+</div>
+</div>
+<script src="js/result.js?v=201812723"></script>
+<script type="text/javascript">
+    $(function () {
+        var picIndex = Math.floor(Math.random() * 5);
+        var picurl = "img/dai_" + picIndex + ".gif";
+        //$("#daikuan").find('img').attr("src",picurl);
+
+        var totalPage = 1;
+        var totalRecords = 2;
+        var pageNo = 1;
+        if (!pageNo) {
+            pageNo = 1;
+        }
+        //生成分页
+        //有些参数是可选的，比如lang，若不传有默认值
+        kkpager.generPageHtml({
+            pno: pageNo,
+            //总页码
+            total: totalPage,
+            //总数据条数
+            totalRecords: totalRecords,
+            //链接前部
+            hrefFormer: 'index',
+            //链接尾部
+            hrefLatter: '.php',
+            getLink: function (n) {
+                return "/index.php" + "?p=" + n + "&q=微信";
+            }
+        });
+    });
+</script>
+
+
+<div class="footer">
+    <p class="copy-right">&copy;2017，本站不提供任何资源存储服务，只提供查询服务</p>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+    window.onload = function (e) {
+        var _body = document.getElementsByTagName('body')[0];
+        _body.style.height = _body.clientHeight + "px";
+    }
+</script>
+<script>
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+
+    if (!IsPC()) {
+        $('#hy').attr('href', 'http://www.qkweixin.com/').css('height', 'auto');
+        $('#hy').find('img').attr('src', 'img/mo_1.gif').css('height', 'auto');
+        $('#hy2').attr('href', 'http://www.qkweixin.com/').css('height', 'auto');
+        $('#hy2').find('img').attr('src', 'img/qkwx_m.jpg').css('height', 'auto');
+    }
+</script>
+<div style="display:none;">
+    <script src="http://s95.cnzz.com/z_stat.php?id=1261202414&web_id=1261202414" language="JavaScript">
+        var _czc = _czc || [];
+        _czc.push(["_setAccount", "1261202414"]);
+    </script>
+</div>
+</body>
+
+</html>
