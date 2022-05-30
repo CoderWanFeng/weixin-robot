@@ -51,7 +51,7 @@ dzs_电子书 = '''[电子书网站]
 
 qhf_群回复 = '''👉你好，我的答疑方式，有问必答：https://www.bilibili.com/video/BV1nF411T7AV
 
-💻本群是机器人答疑，如需和群主交流：https://mp.weixin.qq.com/s/SlG0Bh3dxD3NEc9p7PQLJg'''
+💻本群是机器人答疑，如需和群主交流：https://mp.weixin.qq.com/s/KVaOcfrDiZI5KWscuxtpQg'''
 
 ml_命令 = '''资源仓库：http://t.cn/A6JQ9yce
 
