@@ -1,3 +1,4 @@
+from flask import Flask, request
 js_技术资源 = '''在 #公众号：Python图书馆 后台发送：技术资源，自动获取30+套Python视频教程'''
 
 xr_新人_邀请 = '''欢迎新同学~
@@ -18,7 +19,10 @@ Python自动化办公的代码，
 我已经全部打包，发布到Python官网了
 
 👉免费下载&使用
-视频教程：https://www.bilibili.com/video/BV1pT4y1k7FH
+
+🏠视频教程：https://www.bilibili.com/video/BV1pT4y1k7FH
+
+⭐文字教程：https://mp.weixin.qq.com/s/QhaUoB7Q4CJHR29uD6JSHQ
 
 更多资料，在群公告哟~'''
 
@@ -30,7 +34,7 @@ hqjqr_获取机器人 = '''你好，我是微信机器人，
 
 💡获取微信机器人的免费视频教程 + 源代码
 
-请点击关注👉#公众号：黑科技导航 ，在后台发送命令：机器人，⌚24小时自动获取~
+请直接查看👉http://t.cn/A66p30bI
 
 也可以联系开发者微信：CoderWanFeng'''
 
@@ -49,9 +53,7 @@ dzs_电子书 = '''[电子书网站]
 回复：0816，加入高效办公交流群~'''
 
 
-qhf_群回复 = '''👉你好，我的答疑方式，有问必答：https://www.bilibili.com/video/BV1nF411T7AV
-
-💻本群是机器人答疑，如需和群主交流：https://mp.weixin.qq.com/s/KVaOcfrDiZI5KWscuxtpQg'''
+qhf_群回复 = '''👉你好，💻如需和晚枫1对1交流Python问题，请联系：https://mp.weixin.qq.com/s/9hGurnWoFOaNwZKFoK_Vlw '''
 
 ml_命令 = '''资源仓库：http://t.cn/A6JQ9yce
 
@@ -421,12 +423,12 @@ https://mp.weixin.qq.com/s/2_qNnsPK6fjEAUu3jf-NFA''',
     '正则': '''http://gk.link/a/113MD''',
     '冰墩墩': '''用Python画个冰墩墩吧：https://mp.weixin.qq.com/s/8ktglsoN-Or8X5t6pJKtLw''',
     '奥运': '''用Python画个奥运五环：https://mp.weixin.qq.com/s/WEk-Ap6YfIs3QQFAAzssAg''',
-    '短视频':'''#视频号：程序员晚枫
+    '短视频': '''#视频号：程序员晚枫
 
 https://www.bilibili.com/video/BV1uT4y1i7J8''',
-    '黑科技':'''28个 办公-黑科技软件
+    '黑科技': '''28个 办公-黑科技软件
 合集👉http://t.cn/A667hvgX''',
-    '元宇宙':'''元宇宙：https://mp.weixin.qq.com/s/SX-YB4V8xCrna7ddYN3vdg''',
+    '元宇宙': '''元宇宙：https://mp.weixin.qq.com/s/SX-YB4V8xCrna7ddYN3vdg''',
 
     # '':'''''',
 
@@ -443,7 +445,8 @@ def get_reply(content, type):
             res_keyword_reply = '''{key}
 
 {reply_content}'''
-            res_content = res_keyword_reply.format(key=key, reply_content=keywords_dic[key])
+            res_content = res_keyword_reply.format(
+                key=key, reply_content=keywords_dic[key])
             # return res_content  # 带关键词 + 回复内容
             return keywords_dic[key]  # 不带关键词，直接回复内容
             # print(res_content)
@@ -452,14 +455,13 @@ def get_reply(content, type):
     return ''
 
 
-from flask import Flask, request
-
 app = Flask(__name__)
 
 
 @app.route('/')
 def wxpy_reply():
     try:
+        print(request)
         group_name = request.args['group_name']
         my_group_nick_name = request.args['my_group_nick_name']
         msg_content = request.args['msg_content']
@@ -470,6 +472,28 @@ def wxpy_reply():
         reply_content = 'Exception'
 
     return reply_content
+
+
+@app.route('/baidu_token')
+def get_access_token(self):
+    # 获取token的API
+    url = 'https://aip.baidubce.com/oauth/2.0/token'
+    # 获取access_token需要的参数
+    params = {
+        # 固定参数
+        'grant_type': 'client_credentials',
+        # 必选参数，传入你的API Key
+        'client_id': 'OVALewIvPyLmiNITnceIhrYf',
+        # 必选参数，传入你的Secret Key
+        'client_secret': 'rpBQH8WuXP4ldRQo5tbDkv3t0VgzwvCN'
+    }
+    # 发送请求，获取响应数据
+
+    response = requests.post(url, params)
+    # 将响应的数据转成字典类型，然后取出access_token
+    access_token = eval(response.text)['access_token']
+    # 将access_token返回
+    return access_token
 
 
 if __name__ == '__main__':

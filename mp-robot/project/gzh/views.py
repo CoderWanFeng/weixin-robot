@@ -22,7 +22,7 @@ g_关注欢迎词 = '''欢迎新人~恭喜你发现了这个宝藏小号：Pytho
 （随时更新，建议收藏）
 
 - 程序员 or 海外用户，请 fork/star 下面链接
-🎯https://github.com/zhaofeng092/python_auto_office
+🎯https://github.com/CoderWanFeng
 
 * 我是微信机器人，上面的资源仓库里，
 * 包含我的全部源代码和使用教程~
