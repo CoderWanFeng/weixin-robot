@@ -20,9 +20,7 @@ Python自动化办公的代码，
 
 👉免费下载&使用
 
-🏠视频教程：https://www.bilibili.com/video/BV1pT4y1k7FH
-
-⭐文字教程：https://mp.weixin.qq.com/s/QhaUoB7Q4CJHR29uD6JSHQ
+⭐视频教程：https://www.python-office.com/
 
 更多资料，在群公告哟~'''
 
@@ -34,7 +32,7 @@ hqjqr_获取机器人 = '''你好，我是微信机器人，
 
 💡获取微信机器人的免费视频教程 + 源代码
 
-请直接查看👉http://t.cn/A66p30bI
+请直接查看👉https://www.python-office.com/office/robot.html
 
 也可以联系开发者微信：CoderWanFeng'''
 
